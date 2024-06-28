@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using EmedicineBE.Models;
+using EmedicineBE.Data;
 
 namespace EmedicineBE.Controllers
 {

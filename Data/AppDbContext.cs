@@ -1,7 +1,8 @@
 ﻿// AppDbContext.cs
+using EmedicineBE.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace EmedicineBE.Models
+namespace EmedicineBE.Data
 {
     public class AppDbContext : DbContext
     {

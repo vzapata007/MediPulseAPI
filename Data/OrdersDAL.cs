@@ -2,7 +2,7 @@
 using EmedicineBE.Models;
 using System.Threading.Tasks;
 
-namespace EmedicineBE.Models
+namespace EmedicineBE.Data
 {
     public class OrdersDAL
     {
@@ -10,7 +10,7 @@ namespace EmedicineBE.Models
 
         public OrdersDAL(AppDbContext context)
         {
-            this._context = context;
+            _context = context;
         }
 
         public async Task<Response> AddToOrdersAsync(Orders orders)
@@ -89,7 +89,7 @@ namespace EmedicineBE.Models
             return response;
         }
 
-         public async Task<Response> PlaceOrderAsync(int userId, List<OrderItems> orderItemsList)
+        public async Task<Response> PlaceOrderAsync(int userId, List<OrderItems> orderItemsList)
         {
             var response = new Response();
 

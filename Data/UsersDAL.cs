@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EmedicineBE.Models;
 using System.Threading.Tasks;
+using EmedicineBE.Data;
 
 public class UsersDAL
 {

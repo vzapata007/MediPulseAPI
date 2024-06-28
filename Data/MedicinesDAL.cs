@@ -2,7 +2,7 @@
 using EmedicineBE.Models;
 using System.Threading.Tasks;
 
-namespace EmedicineBE.Models
+namespace EmedicineBE.Data
 {
     public class MedicinesDAL
     {
@@ -10,7 +10,7 @@ namespace EmedicineBE.Models
 
         public MedicinesDAL(AppDbContext context)
         {
-            this._context = context;
+            _context = context;
         }
 
 
