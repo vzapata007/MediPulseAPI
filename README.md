@@ -22,9 +22,13 @@ The API configuration settings can be found in the `appsettings.json` file. Cust
 
 ## Endpoints
 1. Register a new user: `POST /api/users/register`
-2. View all users: `GET /api/users/viewallusers`
-3. Add a new medicine: `POST /api/medicines/add`
-4. Place an order: `POST /api/orders/placeorder`
+2. Login a user: `POST /api/users/login`
+3. View a user: `GET /api/users/viewuser`
+4. Update a user: `PUT /api/users/updateuser`
+5. Delete a user: `DELETE /api/users/deleteuser`
+6. View all users: `GET /api/users/viewallusers`
+7. Add a medicine to cart: `POST /api/medicines/addtocart`
+8. Place an order: `POST /api/orders/placeorder`
 
 ## Contributing
 If you would like to contribute to this project, please fork the repository and submit a pull request with your changes. Make sure to follow the contribution guidelines.
