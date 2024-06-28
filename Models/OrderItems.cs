@@ -1,4 +1,4 @@
-﻿namespace EmedicineBE.Models
+﻿namespace MediPulseAPI.Models
 {
     public class OrderItems
     {

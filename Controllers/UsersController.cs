@@ -1,10 +1,10 @@
-﻿using EmedicineBE.Models;
+﻿using MediPulseAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;
 
-namespace EmedicineBE.Controllers
+namespace MediPulseAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,0 +1,6 @@
+@MediPulseAPI_HostAddress = http://localhost:5063
+
+GET {{MediPulseAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

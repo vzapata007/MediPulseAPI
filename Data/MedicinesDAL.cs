@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using EmedicineBE.Models;
+using MediPulseAPI.Models;
 using System.Threading.Tasks;
 
-namespace EmedicineBE.Data
+namespace MediPulseAPI.Data
 {
     public class MedicinesDAL
     {

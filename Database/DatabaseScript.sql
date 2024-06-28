@@ -1,5 +1,5 @@
-CREATE DATABASE EMedicine;
-USE Emedicine;
+CREATE DATABASE MediPulseDB;
+USE MediPulseDB;
 
 CREATE TABLE Users (
     ID INT IDENTITY (1,1) PRIMARY KEY, 

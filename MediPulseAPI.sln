@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35005.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmedicineBE", "EmedicineBE.csproj", "{4A472BC9-1E5F-414E-8EC7-5AAB4AE475CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediPulseAPI", "MediPulseAPI.csproj", "{4A472BC9-1E5F-414E-8EC7-5AAB4AE475CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

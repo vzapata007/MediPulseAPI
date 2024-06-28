@@ -1,5 +1,5 @@
-using EmedicineBE.Data;
-using EmedicineBE.Models;
+using MediPulseAPI.Data;
+using MediPulseAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
@@ -15,7 +15,7 @@ internal class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "EMedicineBE", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "MediPulseAPI", Version = "v1" });
         });
 
         // Register AppDbContext

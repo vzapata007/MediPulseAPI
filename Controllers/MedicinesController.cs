@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using EmedicineBE.Models;
-using EmedicineBE.Data;
+using MediPulseAPI.Models;
+using MediPulseAPI.Data;
 
-namespace EmedicineBE.Controllers
+namespace MediPulseAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

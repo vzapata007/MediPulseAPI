@@ -1,8 +1,8 @@
 ﻿// AppDbContext.cs
-using EmedicineBE.Models;
+using MediPulseAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace EmedicineBE.Data
+namespace MediPulseAPI.Data
 {
     public class AppDbContext : DbContext
     {

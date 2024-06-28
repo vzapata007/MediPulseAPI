@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using EmedicineBE.Models;
+using MediPulseAPI.Models;
 using System.Threading.Tasks;
-using EmedicineBE.Data;
+using MediPulseAPI.Data;
 
 public class UsersDAL
 {
