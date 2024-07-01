@@ -1,5 +1,6 @@
 ﻿using MediPulseAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;
@@ -134,20 +135,28 @@ namespace MediPulseAPI.Controllers
             }
         }
 
-        [HttpGet("viewallusers")]
-        public async Task<IActionResult> ViewAllUsersAsync()
+        [HttpGet("userorderlist/{userId}/{type}")]
+        public async Task<IActionResult> UserOrderList(int userId, string type)
         {
             try
             {
-                var response = await _dal.ViewAllUsersAsync();
+                var user = new Users
+                {
+                    ID = userId,
+                    Type = type
+                };
 
-                if (response.StatusCode == 200)
+                var response = await _dal.UserOrderListAsync(user);
+
+                if (response.listOrders != null && response.listOrders.Any())
                 {
                     return Ok(response);
                 }
                 else
                 {
-                    return BadRequest(response);
+                    response.StatusCode = 204; // No Content
+                    response.StatusMessage = "No orders found for the user";
+                    return Ok(response);
                 }
             }
             catch (Exception ex)

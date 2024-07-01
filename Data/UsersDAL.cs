@@ -12,8 +12,6 @@ public class UsersDAL
         this._context = context;
     }
 
-    #region "Users"
-
     public async Task<Response> RegisterAsync(Users users)
     {
         var response = new Response();
@@ -137,16 +135,30 @@ public class UsersDAL
         return response;
     }
 
-    public async Task<Response> ViewAllUsersAsync()
+    public async Task<Response> UserOrderListAsync(Users users)
     {
         var response = new Response();
 
         try
         {
-            var users = await _context.Users.ToListAsync();
-            response.StatusCode = 200;
-            response.StatusMessage = "Users Found";
-            response.listUsers = users;
+            if (users.Type == "admin")
+            {
+                // Query all orders for admin users
+                var orders = await _context.Orders.ToListAsync();
+                response.StatusCode = 200;
+                response.StatusMessage = "Orders Found";
+                response.listOrders = orders;
+            }
+            else
+            {
+                // Query orders based on UserID for normal users
+                var orders = await _context.Orders
+                    .Where(o => o.UserID == users.ID)
+                    .ToListAsync();
+                response.StatusCode = 200;
+                response.StatusMessage = "Orders Found";
+                response.listOrders = orders;
+            }
         }
         catch (Exception ex)
         {
@@ -156,8 +168,5 @@ public class UsersDAL
 
         return response;
     }
-
-
-    #endregion
 
 }
